@@ -1,22 +1,25 @@
 <div class="container-fluid">
   <div class="d-flex flex-column gap-1 align-items-start">
-    <a class="btn btn-link text-decoration-none text-reset" data-bs-toggle="collapse" href="#priorToDevelopment"
-      role="button" aria-expanded="false" aria-controls="priorToDevelopment">
-      <h3 class="text-start">As Customer Service & Technical Support Representative</h3>
+    <!-- First Section -->
+    <a class="btn btn-link text-decoration-none text-reset d-flex align-items-center" data-bs-toggle="collapse"
+      href="#priorToDevelopment" role="button" aria-expanded="true" aria-controls="priorToDevelopment"
+      (click)="toggleSection('priorToDevelopment')">
+      <h3 class="text-start me-2">As Customer Service & Technical Support Representative</h3>
+      <i class="bi" [ngClass]="{'bi-chevron-down': isExpanded('priorToDevelopment'), 'bi-chevron-right': !isExpanded('priorToDevelopment')}"></i>
     </a>
     <div class="collapse show ms-3" id="priorToDevelopment">
-      <div class="card card-body">
-        <app-prior-to-development></app-prior-to-development>
-      </div>
+      <app-prior-to-development></app-prior-to-development>
     </div>
-    <a class="btn btn-link text-decoration-none text-reset mt-5" data-bs-toggle="collapse" href="#asDeveloper"
-      role="button" aria-expanded="false" aria-controls="asDeveloper">
-      <h3 class="text-start">As Software Developer</h3>
+
+    <!-- Second Section -->
+    <a class="btn btn-link text-decoration-none text-reset d-flex align-items-center mt-5" data-bs-toggle="collapse"
+      href="#asDeveloper" role="button" aria-expanded="true" aria-controls="asDeveloper"
+      (click)="toggleSection('asDeveloper')">
+      <h3 class="text-start me-2">As Software Developer</h3>
+      <i class="bi" [ngClass]="{'bi-chevron-down': isExpanded('asDeveloper'), 'bi-chevron-right': !isExpanded('asDeveloper')}"></i>
     </a>
     <div class="collapse show ms-3" id="asDeveloper">
-      <div class="card card-body">
-        <app-as-developer></app-as-developer>
-      </div>
+      <app-as-developer></app-as-developer>
     </div>
   </div>
 </div>
