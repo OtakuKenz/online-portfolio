@@ -11,24 +11,4 @@ import { ContactMeComponent } from "../../contact-me/contact-me.component";
   styleUrl: './body.component.scss'
 })
 export class BodyComponent {
-  @ViewChildren('sections') sections!: QueryList<ElementRef>;
-
-  ngAfterViewInit(): void {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          } else {
-            entry.target.classList.remove('animate');
-          }
-        });
-      },
-      { threshold: 0.2 } // Trigger when 20% of the section is visible
-    );
-
-    this.sections.forEach((section) => {
-      observer.observe(section.nativeElement);
-    });
-  }
 }
