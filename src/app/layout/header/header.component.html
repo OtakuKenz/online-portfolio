@@ -1,0 +1,52 @@
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom-style {{headerClass}}">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <span class="fs-4">Earl's CV</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience & Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#awards">Awards & Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn btn-link nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" data-bs-display="static">
+              <app-theme-icons [theme]="theme"></app-theme-icons>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li>
+                <button class="dropdown-item" type="button" (click)="toggleDarkTheme()">
+                  <app-theme-icons [includeLabel]="true" [theme]="'dark'"></app-theme-icons>
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" (click)="toggleLightTheme()">
+                  <app-theme-icons [includeLabel]="true" [theme]="'light'"></app-theme-icons>
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" (click)="toggleAutoTheme()">
+                  <app-theme-icons [includeLabel]="true" [theme]="'auto'"></app-theme-icons>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

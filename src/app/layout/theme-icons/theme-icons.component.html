@@ -1,0 +1,14 @@
+<ng-container *ngIf="theme === 'dark'">
+    <i class="bi bi-moon-stars-fill"></i> 
+    <span *ngIf="includeLabel"> Dark</span>
+</ng-container>
+
+<ng-container *ngIf="theme === 'light'">
+    <i class="bi bi-brightness-high-fill"></i> 
+    <span *ngIf="includeLabel"> Light</span>
+</ng-container>
+
+<ng-container *ngIf="theme === 'auto'">
+    <i class="bi bi-circle-half"></i> 
+    <span *ngIf="includeLabel"> Auto</span>
+</ng-container>
